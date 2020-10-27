@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css2?family=Arvo');
+@import url('https://fonts.googleapis.com/css2?family=Rubik');
+
+* {
+	margin: 0;	
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	background-color: #14213D;
+	height: auto;
+	width: auto;
+}
+
+body {
+	top: 50%;
+	position: relative;
+	display: block;
+}
+
+p, a {
+	font-family: Open Sans;
+	color: #0a0a0a;
+	font-weight: 600;
+}
+
+header {
+	text-align: center;
+}
+
+img.logo {
+	margin: 50px auto 0 auto;
+	padding: 10px;
+	max-width: 600px;
+	display: block;
+	user-select: none;
+	pointer-events: none;
+}
+
+h2#sub {
+	font-family: Rubik;
+	font-style: italic;
+	margin-top: -80px;
+	color: #FCA311;
+	position: relative;
+	transform: rotate(-2.5deg);
+	padding-left: 10px;
+}
+
+section {
+	text-align: center;
+	margin: 60px 10% 30px 10%;
+	padding: 10px;
+	background-color: #fafafa;
+	max-width: 90%;
+}
+
+ul {
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+li {
+	display: inline-block;
+	transition: 0.5s;
+}
+
+li a {
+	transition: 0.5s;
+}
+
+li#yt {
+	background-color: #ff0000;
+	margin: 8px;
+}
+
+li#tw {
+	background-color: #1da1f2;
+	margin: 8px;
+}
+
+li#cont {
+	background-color: #14213d;
+	padding: 25px 50px;
+	margin: 5px;
+	justify-content: center;
+}
+
+#yt a, #tw a {
+	text-decoration: none;
+	display: block;
+	padding: 35px 60px;
+	font-weight: 700;
+}
+
+#yt a:hover {
+	color: #ff0000;
+	background-color: #fafafa;
+}
+
+#tw a:hover {
+	color: #1da1f2;
+	background-color: #fafafa;
+}
+
+li#cont p, a {
+	color: #fafafa;
+	position: relative;
+	display: inline-block;
+}
+
+li#cont:hover {
+	opacity: 97%;
+}
+
+li#cont a:hover {
+	color: #fca311;
+}
+
+#wrap {
+	position: relative;
+	overflow: hidden;
+	display: flex;
+}
+
+li i {
+	position: absolute;
+	display: block;
+	opacity: 20%;
+	margin-left: 0;
+	margin-right: 0;
+	font-size: 500%;
+	transform: rotate(-10deg);
+	text-indent: -5px;
+}
+
+.email {
+	position: relative;
+}
+
+.email:after {
+	background-color: #0a0a0a;
+	color: #fafafa;
+	box-sizing: border-box;
+	content: attr(data-tooltip);
+	display: none;
+	padding: 5px;
+	position: absolute;
+	z-index: 3;
+	margin: 2px;
+}
+
+.email:hover:after {
+	display: block;
+}
+
+.emailicon {
+	width: 20px;
+	fill: white;
+}
+
+input#url {
+	visibility: hidden;
+}
+
+footer p {
+	text-align: center;
+	color: #fafafa;
+}
+
+@media (max-width: 1000px) {
+	section {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	body {
+		justify-content: center;
+		box-sizing: border-box;
+	}
+	img.logo {
+		max-width: 60vw;
+		margin-top: 2%;
+	}
+	a,p,h2 {
+		max-width: 100%;
+	}
+	h2 {
+		padding-top: 4vh;
+		margin-left: 30px;
+		font-size: 3vw;
+	}
+	section {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	ul, section {
+		flex-direction: column;
+	}
+	li {
+		margin: auto 10%;
+	}
+	li#cont {
+		padding: 10px;
+	}
+}
